@@ -3,7 +3,7 @@
 ## 🌱 Project Description
 The **Potato Disease Web App** is an AI-powered tool designed to help **farmers** and **agricultural researchers** identify and understand various diseases affecting potato crops. 🏡👨‍🌾
 
-Built with **PureBasic, JavaScript, Python, HTML, and CSS**, this web application provides an **intuitive and interactive** platform to diagnose potato diseases and suggest potential treatments. 🛠️💡
+Built with **React, FastAPI, Python, and CSS**, this web application provides an **intuitive and interactive** platform to diagnose potato diseases and suggest potential treatments. 🛠️💡 The AI model for disease detection is hosted on **Google Cloud Platform (GCP)** for seamless and scalable processing. ☁️🚀
 
 ---
 
@@ -32,10 +32,11 @@ Follow these steps to install and run the **Potato Disease Web App** locally:
 
 3️⃣ **Install the required dependencies:** 📦
    ```sh
-   # For Python dependencies
+   # For FastAPI (Backend dependencies)
    pip install -r requirements.txt
    
-   # For JavaScript dependencies
+   # For React (Frontend dependencies)
+   cd frontend
    npm install
    ```
 
@@ -44,12 +45,23 @@ Follow these steps to install and run the **Potato Disease Web App** locally:
 ## 🚀 Usage
 Start the application by running:
 
-```sh
-# Start the local server
-python app.py
-```
+1️⃣ **Run the FastAPI backend:** 🚀
+   ```sh
+   uvicorn main:app --reload
+   ```
+   The backend will be available at `http://localhost:8000`
 
-🔗 **Open your browser and visit:** `http://localhost:5000` to access the app! 🌍💻
+2️⃣ **Run the React frontend:** 💻
+   ```sh
+   cd frontend
+   npm start
+   ```
+   The frontend will be available at `http://localhost:3000`
+
+3️⃣ **Google Cloud AI Model Integration:** ☁️🤖
+   - The AI model for disease detection is hosted on **Google Cloud Platform (GCP)**.
+   - The backend communicates with the model via **Google Cloud APIs** to process images and return predictions.
+   - Ensure you have the necessary GCP credentials and API keys configured in your `.env` file.
 
 ---
 
@@ -57,7 +69,9 @@ python app.py
 ✅ **AI-powered disease detection** using image processing 📷🤖  
 ✅ **Detailed insights** on various potato diseases 📚🔍  
 ✅ **Treatment recommendations** and **preventive measures** 🏥🍃  
-✅ **User-friendly interface** for easy navigation 🎨🖥️  
+✅ **User-friendly React interface** for seamless navigation 🎨🖥️  
+✅ **FastAPI backend** for efficient data processing ⚡🔗  
+✅ **Google Cloud AI model** for scalable and accurate predictions ☁️✨  
 
 ---
 
